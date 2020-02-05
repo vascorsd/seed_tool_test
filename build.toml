@@ -1,0 +1,18 @@
+[project]
+scalaVersion       = "2.13.1"
+scalaOptions       = ["-Yliteral-types"]
+scalaOptions       = [
+  "-encoding", "UTF-8",
+  "-unchecked",
+  "-deprecation",
+  "-Ywarn-numeric-widen",
+  "-feature"
+]
+
+[module.core]
+root               = "core"
+sources            = ["core/src"]
+targets            = ["jvm"]
+
+[module.core.test]
+sources            = ["core/test"]
