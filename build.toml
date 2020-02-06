@@ -9,10 +9,30 @@ scalaOptions       = [
   "-feature"
 ]
 
+
+## ----------------------
 [module.core]
 root               = "core"
 sources            = ["core/src"]
 targets            = ["jvm"]
+scalaDeps = [
+  ["dev.zio", "zio", "1.0.0-RC17"],
+  ["dev.zio", "zio-streams", "1.0.0-RC17"],
+]
 
 [module.core.test]
 sources            = ["core/test"]
+
+
+## ----------------------
+[module.conversions]
+root               = "conversions"
+sources            = ["conversions/src"]
+targets            = ["jvm"]
+scalaDeps = [
+  ["dev.zio", "zio", "1.0.0-RC17"],
+  ["dev.zio", "zio-streams", "1.0.0-RC17"],
+]
+
+[module.conversions.test]
+sources            = ["conversions/test"]
